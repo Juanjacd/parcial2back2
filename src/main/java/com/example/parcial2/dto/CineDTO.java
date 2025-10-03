@@ -1,21 +1,14 @@
-package com.example.parcial2;
+package com.example.parcial2.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "cines")
-public class Cine {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CineDTO {
     private Long id;
-
     private String nombre;
     private String direccion;
 
-    public Cine() {}
+    public CineDTO() {}
 
-    public Cine(String nombre, String direccion) {
+    public CineDTO(Long id, String nombre, String direccion) {
+        this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
     }
